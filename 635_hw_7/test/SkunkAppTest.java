@@ -40,4 +40,16 @@ public class SkunkAppTest {
 		assertEquals("second die is not 1", 1, d.getDie2Roll());		
 	}
 	
+	@Test
+	public void new_dice_rolls_three_then_double_fours() {
+		Dice d = new Dice(new int[] {1, 4}, new int[] {2, 4});
+		d.roll();
+		assertEquals("first die is not 1", 1, d.getDie1Roll());
+		assertEquals("second die is not 2", 2, d.getDie2Roll());
+		d.roll();
+		assertEquals("first die is not 4", 4, d.getDie1Roll());
+		assertEquals("second die is not 4", 4, d.getDie2Roll());		
+	}
+	
+	
 }
