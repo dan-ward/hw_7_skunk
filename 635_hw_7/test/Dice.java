@@ -5,21 +5,30 @@ public class Dice {
 	private int[] die2Rolls;
 	private int loadedDieIndex;
 	
+	private int lastDie1Roll;
+	private int lastDie2Roll;
+	
 	public Dice () {
 	}
 	
 	public Dice (int[] die1Rolls, int[] die2Rolls) {
+		loadedDieIndex = 0;
+		this.die1Rolls = die1Rolls;
+		this.die2Rolls = die2Rolls; 
 	}
 	
 	public void roll() {
+		lastDie1Roll = die1Rolls[loadedDieIndex];
+		lastDie2Roll = die2Rolls[loadedDieIndex];
+		loadedDieIndex++;
 	}
 	
 	public int getDie1Roll() {
-		return 0;
+		return lastDie1Roll;
 	}
 
 	public int getDie2Roll() {
-		return 0;
+		return lastDie2Roll;
 	}	
 	
 	public static void main(String[] args) {
