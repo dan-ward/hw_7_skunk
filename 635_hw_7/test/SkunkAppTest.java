@@ -11,7 +11,7 @@ public class SkunkAppTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		fail("My first test failure");
 	}
 
 }
